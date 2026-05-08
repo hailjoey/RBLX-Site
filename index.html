@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roblox Pulse</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">R</div>
+        <div>
+          <p class="eyebrow">Roblox fan site</p>
+          <h1>Roblox Pulse</h1>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#updates">Updates</a>
+        <a href="#community">Community</a>
+        <a href="#tax-calculator">Robux Tax</a>
+        <a href="#top-games">Top Games</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Fresh Roblox insights</p>
+          <h2>Stay ahead with the latest Roblox updates, community opinions, and earnings tools.</h2>
+          <p class="hero-copy">Built for developers and creators who want timely dev forum updates, daily top game trends, and accurate Robux tax estimates.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#top-games">Explore top games</a>
+            <a class="btn btn-secondary" href="#tax-calculator">Calculate tax</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <span>Latest Roblox Update</span>
+            <strong>Dynamic animation and mobile quality improvements</strong>
+          </div>
+          <ul class="hero-list">
+            <li>New matchmaking API now in beta</li>
+            <li>Forum feedback trend: community loves avatar editor updates</li>
+            <li>Creator exchange rate stabilized for Robux payouts</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="updates" class="section-block">
+        <div class="section-heading">
+          <p class="eyebrow">Developer forum roundup</p>
+          <h2>Most recent Roblox updates</h2>
+        </div>
+        <div class="update-meta">
+          <span id="updateStatus">Loading latest Dev Forum posts…</span>
+        </div>
+        <div class="card-grid" id="updateCards"></div>
+      </section>
+
+      <section id="community" class="section-block section-alt">
+        <div class="section-heading">
+          <p class="eyebrow">Community opinion</p>
+          <h2>What Roblox players are saying</h2>
+        </div>
+        <div class="community-grid">
+          <div class="community-panel">
+            <h3>Sentiment snapshot</h3>
+            <div class="sentiment-stats">
+              <div>
+                <strong id="positivePct">0%</strong>
+                <span>Positive</span>
+              </div>
+              <div>
+                <strong id="neutralPct">0%</strong>
+                <span>Neutral</span>
+              </div>
+              <div>
+                <strong id="negativePct">0%</strong>
+                <span>Negative</span>
+              </div>
+            </div>
+            <ul class="opinion-list" id="opinionList"></ul>
+          </div>
+          <div class="community-panel">
+            <h3>Trending discussion topics</h3>
+            <div id="topicChips" class="topic-chips"></div>
+            <div class="survey-box">
+              <h4>Your opinion</h4>
+              <p>Which Roblox feature would you like to see next?</p>
+              <select id="communityChoice">
+                <option value="animations">Animation editor</option>
+                <option value="economy">Robux economy tools</option>
+                <option value="events">In-game live events</option>
+                <option value="mobile">Mobile performance</option>
+              </select>
+              <button class="btn btn-primary" id="voteBtn">Submit vote</button>
+              <p class="survey-result" id="surveyResult"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tax-calculator" class="section-block">
+        <div class="section-heading">
+          <p class="eyebrow">Robux income tool</p>
+          <h2>Robux tax calculator</h2>
+        </div>
+        <div class="tax-grid">
+          <div class="tax-panel">
+            <label for="robuxAmount">Expected Robux earnings</label>
+            <input id="robuxAmount" type="number" min="0" value="15000" />
+            <label for="taxRate">Tax rate (%)</label>
+            <input id="taxRate" type="number" min="0" max="100" value="30" />
+            <button class="btn btn-primary" id="calculateBtn">Calculate</button>
+          </div>
+          <div class="tax-panel tax-result-panel">
+            <h3>Estimate</h3>
+            <div class="tax-result-row"><span>Tax amount</span><strong id="taxAmount">0 Robux</strong></div>
+            <div class="tax-result-row"><span>Net earnings</span><strong id="netRobux">0 Robux</strong></div>
+            <div class="tax-result-row"><span>Estimated USD</span><strong id="usdValue">$0.00</strong></div>
+            <p class="tax-note">Use this tool to preview how much Robux remains once your chosen tax or fee structure is applied.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="top-games" class="section-block section-alt">
+        <div class="section-heading">
+          <p class="eyebrow">Daily ranking</p>
+          <h2>Top Roblox games today</h2>
+        </div>
+        <div class="top-games-meta">
+          <span id="gamesUpdatedAt"></span>
+          <span>Based on community engagement and daily player trends.</span>
+        </div>
+        <div class="games-grid" id="gamesGrid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Roblox Pulse is a fan-made showcase for Roblox creators and players. Data is simulated for demonstration.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
